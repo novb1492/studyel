@@ -33,5 +33,20 @@ for(int i=1;i<=100;i++)
 }
 out.println("1~100까지 합"+sum);
 --%>
+
+
+<c:set var="arr" value="<%=new int []{1,3,5,7,9} %>"/> <!-- 개인적으로 잘 안쓰긴하는데 알아둬야겠다 20210506 -->
+
+<c:forEach var="i" items="${arr }">
+	${i}<br>
+</c:forEach>
+
+<%--<%
+int []arr=new int[]{1,3,5,7,9};
+for(int i : arr)
+{
+	out.print(i);
+}
+--%>
 </body>
 </html>

@@ -20,16 +20,24 @@ public class frontcontroller extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		System.out.println("get요철 발생");
 		
 		String uri=request.getRequestURI();
-		System.out.println(request.getRequestURI());
+		String conpath=request.getContextPath();
 		
-		if(uri.equals("/EL/join.do"))///미쳤네 ㅋㅋㅋㅋㅋㅋㅋ 이런게 된다고 ㅋㅋㅋㅋ20210506
+		System.out.println(request.getRequestURI()+"주소");
+		System.out.println(request.getContextPath()+"패키지이름");
+		
+		String com=uri.substring(conpath.length());
+		
+		//System.out.println(com+"sub");
+		
+		if(com.equals("/join.do"))///미쳤네 ㅋㅋㅋㅋㅋㅋㅋ 이런게 된다고 ㅋㅋㅋㅋ20210506 겁먹었는데 생각보다 이해가 빨리되서 다행이다...
 		{
 		System.out.println("회원가입요철");
 		}
-		else if(uri.equals("/EL/loing.do"))
+		else if(com.equals("/loing.do"))
 		{
 			System.out.println("로그인요철");
 		}
