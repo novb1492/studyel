@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<form action="jstl_testprocess.jsp" method="post">
+점수:<input type="text" name="score">
+<input type="submit" value="제출">
+</form>
 </body>
 </html>
